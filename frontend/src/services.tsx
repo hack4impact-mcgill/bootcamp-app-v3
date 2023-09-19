@@ -19,17 +19,6 @@ export async function getTodos() {
 	}
 }
 
-export async function deleteTodo(id: number) {
-	// try...catch statements helps us catch errors when they occur
-	// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch
-	try {
-		const response = await axios.delete(`${TODO_API_URL}/todo/${id.toString()}`);
-		return response;
-	} catch (e) {
-		throw new Error("Error in Axios query");
-	}
-}
-
 export async function addTodo(newTodo: TodoI) {
 	try {
 		const response = await axios.post(`${TODO_API_URL}/todos`, newTodo);

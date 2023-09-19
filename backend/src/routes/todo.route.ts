@@ -33,10 +33,3 @@ router.put("/todo/:id", (req, res) => {
     } */
     todoController.updateTodo(req, res);
 });
-router.delete("/todo/:id", (req, res) => {
-    /*  #swagger.parameters['id'] = {
-            type: "string"
-        }
-    } */
-    todoController.deleteTodo(req, res);
-});

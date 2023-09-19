@@ -29,10 +29,4 @@ export class TodoController {
 		);
 		response.status(200).json({ todo });
 	}
-
-	deleteTodo = async (request: Request, response: Response) => {
-		const todoToDelete = await this.TodoRepository.findOneBy({id: parseInt(request.params.id)});
-		const todo = await this.TodoRepository.delete(todoToDelete!);
-		response.status(200).json({ todo });
-	}
 }
