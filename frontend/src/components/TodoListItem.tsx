@@ -3,6 +3,7 @@ import { Checkbox, FormControlLabel, Box } from '@mui/material';
 import { updateTodo } from '../services';
 import {useTodoStore} from './TodoApp';
 import {TodoI, TodoStore} from '../types/Todo';
+import DeleteButton from './DeleteButton';
 
 // Component takes in a prop called 'todo' that is of type 'TodoI'
 const TodoItem = (props: { todo: TodoI }) => {
@@ -51,6 +52,7 @@ const TodoItem = (props: { todo: TodoI }) => {
                     padding: '0px 0px 0px 16px',
                 }}
             />
+            <DeleteButton todo={props.todo}/>
         </Box>
     )
 }

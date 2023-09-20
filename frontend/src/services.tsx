@@ -38,3 +38,12 @@ export async function updateTodo(todo: TodoI) {
 		throw new Error("Error in Axios query");
 	}
 }
+
+export async function deleteTodo(id: number) {
+	try {
+		const response = await axios.delete(`${TODO_API_URL}/todo/${id.toString()}`);
+		return response;
+	} catch (e) {
+		throw new Error("Error in Axios query");
+	}
+}
