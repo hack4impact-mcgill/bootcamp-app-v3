@@ -22,6 +22,18 @@ In a seperate shell, run server
 
 `npm run dev`
 
+--
+
+To stop containers without removing them: `docker-compose stop`
+
+To stop containers and remove them (along with their volumes—this will drop all tables from the database!): `docker-compose down -v`
+
+
+####  when the database schema is changed, you need to remove the database and re-create it, this is done by doing 
+
+`docker-compose down -v`  and then  `docker-compose up`
+
+
 ### **frontend setup**
 
 In a seperate shell, change to `/frontend` directory
